@@ -40,8 +40,9 @@ function getTweets(q) {
         if(!error) {
             for(let i = 0; i < tweets.length; i++) {
                 const date = tweets[i].created_at.substring(0, 19);
-                console.log(`${i}: ${tweets[i].text} - ${date}`)
-                fs.appendFile('log.txt', '@Defiled Spec' + tweets[i].text + 'Created At:' + date + '\n', (err) => {
+                const tweetInfo = `@Defiled Spec - ${tweets[i].text} Created At: ${date}\n`;
+                console.log(`${i}: ${tweetInfo}`)
+                fs.appendFile('log.txt', 'Command: "my-tweets" => ' + tweetInfo, (err) => {
                     if(err) {console.error(`Error writing to file 'log.txt': ${err}`)}
                 })
             }

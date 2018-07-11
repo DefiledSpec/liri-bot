@@ -1,3 +1,4 @@
-@Defiled SpecThis is a tweet.Created At:Wed Jul 11 21:28:32
-@Defiled SpecThis is a tweet.Created At:Wed Jul 11 21:28:32
-@Defiled SpecThis is a tweet.Created At:Wed Jul 11 21:28:32
+Command: "my-tweets" => @Defiled Spec - This is a tweet. Created At: Wed Jul 11 21:28:32
+Command: "my-tweets" => @Defiled Spec - This is a tweet. Created At: Wed Jul 11 21:28:32
+Command: "my-tweets" => @Defiled Spec - This is a tweet. Created At: Wed Jul 11 21:28:32
+Command: "my-tweets" => @Defiled Spec - This is a tweet. Created At: Wed Jul 11 21:28:32
