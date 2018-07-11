@@ -12,7 +12,7 @@ let command = process.argv[2];
 let args = process.argv[3];
 
 if(command) {
-    if(args) {
+    // if(args) {
         const query = concatArgs(consoleArgs);
         switch(command) {
             case 'my-tweets':
@@ -30,7 +30,7 @@ if(command) {
             default:
                 console.log('Please use a correct command!')
         }
-    }
+    // }
 }
 
 function getTweets(q) {
@@ -51,8 +51,12 @@ function getTweets(q) {
 }
 
 function getSong(q) {
-    console.log('Getting Song for ' + q)
-
+    // console.log('Getting Song for ' + q?q:'monsters')
+    spotifyClient.search({ type: 'track', query: q?q:'monsters', limit: 1}, function(error, data){
+        if(!error) {
+            console.log(data.tracks.items[0].artists[0].name)
+        }
+    });
 }
 
 function getMovie(q) {
