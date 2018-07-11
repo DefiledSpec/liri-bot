@@ -1,0 +1,20 @@
+{
+  "name": "liri-bot",
+  "version": "1.0.0",
+  "description": "LIRI bot using node, twitter, omdb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DefiledSpec/liri-bot.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/DefiledSpec/liri-bot/issues"
+  },
+  "homepage": "https://github.com/DefiledSpec/liri-bot#readme"
+}
