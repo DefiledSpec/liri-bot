@@ -36,24 +36,29 @@ if(command) {
 function getTweets(q) {
     const user = 'defiled spec'
     console.log(`Getting Tweets for ${user}`)
-    twitterClient.get('statuses/user_timeline', user, (error, tweets, response) => {
+    twitterClient.get('statuses/user_timeline', user, (error, tweets) => {
         if(!error) {
             for(let i = 0; i < tweets.length; i++) {
-                const date = tweets[i].created_at;
-                console.log(`${i}: ${tweets[i].text} - ${date.substring(0, 19)}`)
+                const date = tweets[i].created_at.substring(0, 19);
+                console.log(`${i}: ${tweets[i].text} - ${date}`)
+                fs.appendFile('log.txt', '@Defiled Spec' + tweets[i].text + 'Created At:' + date + '\n', (err) => {
+                    if(err) {console.error(`Error writing to file 'log.txt': ${err}`)}
+                })
             }
-        } else { throw new Error(error) }
-    })
-    
+        } else { console.error(error) }
+    });
 }
+
 function getSong(q) {
     console.log('Getting Song for ' + q)
 
 }
+
 function getMovie(q) {
     console.log('Getting Movie for ' + q)
 
 }
+
 function doRandom() {
     console.log('Doing Random Stuff')
 
@@ -61,8 +66,14 @@ function doRandom() {
 
 function concatArgs(args) {
     if(args[3]) {
+        let query = '';
         for(let i = 3; i < args.length; i++) {
-            console.log(args[i])
+            if(i === 3) {
+                query = args[i]
+            } else {
+                query += `+${args[i]}`
+            }
         }
+        return query;
     }
 }
