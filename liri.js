@@ -2,39 +2,72 @@ require('dotenv').config();
 let keys = require('./keys');
 let Spotify = require('node-spotify-api');
 let Twitter = require('twitter');
+const fs = require('fs');
+const moment = require('moment');
+
+
+
+
 const spotifyClient = new Spotify(keys.spotify);
 const twitterClient = new Twitter(keys.twitter);
-var fs = require('fs');
 
 console.log('starting')
 let consoleArgs = process.argv;
 let command = process.argv[2];
-let args = process.argv[3];
 
 if(command) {
-    // if(args) {
-        const query = concatArgs(consoleArgs);
-        switch(command) {
-            case 'my-tweets':
-                getTweets()       
-                break;
-            case 'spotify-this-song':
-                getSong(query)
-                break;
-            case 'movie-this':
-                getMovie(query)
-                break;
-            case 'do-what-it-says':
-                doRandom();
-                break;
-            default:
-                console.log('Please use a correct command!')
-        }
-    // }
+    const query = concatArgs(consoleArgs);
+    switch(command) {
+        case 'my-tweets':
+            getTweets()       
+            break;
+        case 'spotify-this-song':
+            getSong(query)
+            break;
+        case 'movie-this':
+            getMovie(query)
+            break;
+        case 'do-what-it-says':
+            doRandom();
+            break;
+        default:
+            console.log('Please use a correct command!')
+    }
 }
 
+function logger(str, type) {
+    const logFile = 'log.txt'
+    const seperator = '-----------------------\n';
+    const debugFile = 'errLog.txt'
+
+    if(!type) {
+        fs.appendFile(logFile, str, err => {if(err) {
+                console.log(err)
+            }else{
+                console.log(`Finished writing ${str} to ${logFile}`)
+            }
+        })
+        fs.appendFile(logFile, seperator, err => {
+            if(err) {
+                console.log(err) 
+            }else {
+                console.log(`Finished writing ${seperator} to ${logFile}`)
+            }
+        })
+    }else{
+        fs.appendFile(debugFile, str + '\n', err => {
+            if(err) {
+                conosle.log(err)
+            }else{
+                console.log(`Wrote Err ${str} to ${debugFile}`)
+            }
+        })
+    }
+}
+
+
 function getTweets(q) {
-    const user = 'defiled spec'
+    const user = 'Defiled Spec'
     console.log(`Getting Tweets for ${user}`)
     twitterClient.get('statuses/user_timeline', user, (error, tweets) => {
         if(!error) {
@@ -42,11 +75,10 @@ function getTweets(q) {
                 const date = tweets[i].created_at.substring(0, 19);
                 const tweetInfo = `@Defiled Spec - ${tweets[i].text} Created At: ${date}\n`;
                 console.log(`${i}: ${tweetInfo}`)
-                fs.appendFile('log.txt', 'Command: "my-tweets" => ' + tweetInfo, (err) => {
-                    if(err) {console.error(`Error writing to file 'log.txt': ${err}`)}
-                })
+                logger(tweetInfo)
+
             }
-        } else { console.error(error) }
+        }
     });
 }
 
