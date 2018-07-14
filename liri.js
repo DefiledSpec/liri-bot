@@ -7,6 +7,7 @@ const moment = require('moment');
 
 
 
+const seperator = '-----------------------\n';
 
 const spotifyClient = new Spotify(keys.spotify);
 const twitterClient = new Twitter(keys.twitter);
@@ -37,11 +38,11 @@ if(command) {
 
 function logger(str, type) {
     const logFile = 'log.txt'
-    const seperator = '-----------------------\n';
     const debugFile = 'errLog.txt'
 
     if(!type) {
-        fs.appendFile(logFile, str, err => {if(err) {
+        fs.appendFile(logFile, str, err => {
+            if(err) {
                 console.log(err)
             }else{
                 console.log(`Finished writing ${str} to ${logFile}`)
@@ -74,10 +75,12 @@ function getTweets(q) {
             for(let i = 0; i < tweets.length; i++) {
                 const date = tweets[i].created_at.substring(0, 19);
                 const tweetInfo = `@Defiled Spec - ${tweets[i].text} Created At: ${date}\n`;
-                console.log(`${i}: ${tweetInfo}`)
+                // console.log(`${i}: ${tweetInfo}`);
                 logger(tweetInfo)
-
             }
+            logger(seperator);
+        } else {
+            logger(error, true);
         }
     });
 }
