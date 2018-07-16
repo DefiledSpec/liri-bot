@@ -3,7 +3,7 @@ let keys = require('./keys');
 let Spotify = require('node-spotify-api');
 let Twitter = require('twitter');
 const fs = require('fs');
-const moment = require('moment');
+// const moment = require('moment');
 
 
 
@@ -36,27 +36,52 @@ if(command) {
     }
 }
 
-function logger(str, type) {
+function logger(type, data, err) {
     const logFile = 'log.txt'
     const debugFile = 'errLog.txt'
+    switch(type) {
+        case 'tweets': 
+            
+            break;
+        case 'songify':
 
-    if(!type) {
-        fs.appendFile(logFile, str, err => {
+            break;
+        case 'omdb':
+
+            break;
+        case 'random':
+
+            break;
+        default:
+            type = 'random'
+            console.log('Incorrect logger type specified!')
+    }
+    const startMsg = `----- ${type} File Starting -----\n`
+    if(!err) {
+        fs.appendFile(logFile, startMsg, err => {
             if(err) {
                 console.log(err)
             }else{
-                console.log(`Finished writing ${str} to ${logFile}`)
-            }
-        })
-        fs.appendFile(logFile, seperator, err => {
-            if(err) {
-                console.log(err) 
-            }else {
-                console.log(`Finished writing ${seperator} to ${logFile}`)
+                for (let i = 0; i < data.length; i++) {
+                    const res = data[i]
+                    for (const key in res) {
+                        let msg = `${key}: ${res[key]}\n`
+                        fs.appendFile(logFile, msg, err => {
+                            if(err) {
+                                console.log(err)
+                            }else{
+                                console.log('good')
+                            }
+                        })
+                    }
+                }
+                fs.appendFile(logFile, seperator, err => {
+                    if(err) console.log(err)
+                })
             }
         })
     }else{
-        fs.appendFile(debugFile, str + '\n', err => {
+        fs.appendFile(debugFile, data + '\n', err => {
             if(err) {
                 conosle.log(err)
             }else{
@@ -72,13 +97,18 @@ function getTweets(q) {
     console.log(`Getting Tweets for ${user}`)
     twitterClient.get('statuses/user_timeline', user, (error, tweets) => {
         if(!error) {
+            let tweetsArr = [];
             for(let i = 0; i < tweets.length; i++) {
-                const date = tweets[i].created_at.substring(0, 19);
-                const tweetInfo = `@Defiled Spec - ${tweets[i].text} Created At: ${date}\n`;
-                // console.log(`${i}: ${tweetInfo}`);
-                logger(tweetInfo)
+                const date = tweets[i].created_at;
+                // const tweetInfo = `${i}. @Defiled Spec - ${tweets[i].text} Created At: ${date}\n`;
+                const tweetInfo = `tweets[i].text`;
+                const tweet = {
+                    text: tweets[i].text,
+                    date: tweets[i].created_at.substring(0, 19),
+                }
+                tweetsArr.push(tweet)
             }
-            logger(seperator);
+            logger('tweets', tweetsArr)
         } else {
             logger(error, true);
         }
