@@ -46,15 +46,16 @@ function getTweets(q) {
     const user = 'Defiled Spec'
     console.log(`Getting Tweets for ${user}`)
     twitter.get('statuses/user_timeline', user, (error, tweets) => {
+        time = Date.now() - startTime
+        let message = `Twitter search for '${user}' ${error ? 'failed' : 'succeeded'} and took ${(time / 1000).toFixed(1)}s to complete.`
         if(!error) {
             let tweetsArr = [];
+
             for(let i = 0; i < tweets.length; i++) {
-                const date = tweets[i].created_at;
-                // const tweetInfo = `${i}. @Defiled Spec - ${tweets[i].text} Created At: ${date}\n`;
-                const tweetInfo = `tweets[i].text`;
                 const tweet = {
-                    text: tweets[i].text,
-                    date: tweets[i].created_at.substring(0, 19),
+                    Tweet: tweets[i].text,
+                    Date: tweets[i].created_at.substring(0, 19),
+                    Result: message,
                 }
                 tweetsArr.push(tweet)
             }
@@ -68,14 +69,29 @@ function getTweets(q) {
 }
 // spotify-this-song <song> || 'monsters'
 function getSong(q) {
-    spotify.search({ type: 'track', query: q ? q: 'monsters', limit: 1}, function(error, data){
-        if(!error) {
-            console.log('\t' + data.tracks.items[0].artists[0].name)
-        } else {
-            console.log(error)
-        }
+    let query = q ? q : 'The Sign'
+    spotify.search({ type: 'track', query: query, limit: 1}, function(error, data){
         time = Date.now() - startTime
-        console.log(`\nSpotify search for ${q} ${error ? 'failed' : 'succeeded'} and took ${(time / 1000).toFixed(1)}s to complete.`)
+        let message = `Spotify search for '${query}' ${error ? 'failed' : 'succeeded'} and took ${(time / 1000).toFixed(1)}s to complete.`
+        if(!error) {
+            let songs = data.tracks.items[0]
+            let songData = [
+                {
+                    Artists: songs.artists[0].name,
+                    Song: songs.name,
+                    URL: songs.preview_url,
+                    Album: songs.album.name,
+                    Result: message
+                }
+            ]
+            
+            let log = new Log(songData, 'Spotify', false)
+            myLogger.logData(log)
+        } else {
+            const errLog = new Log([{msg: error}], 'Spotify Error', true)
+            myLogger.logData(errLog)
+        }
+        console.log(`\n${message}`)
     });
 }
 // movie-this
