@@ -39,11 +39,11 @@ The data is logged in markdown format for easier readability and access to the i
 
 ### TO-DO
 ---
+- [x] `my-tweets`
+- [x] `songify-this-song`
+- [ ] `movie-this`
+- [ ] `do-what-it-says`
 
-    - [x] `my-tweets`
-    - [x] `songify-this-song`
-    - [ ] `movie-this`
-    - [ ] `do-what-it-says`
-
+---
 
 Please fill free to submit an issue [here](https://github.com/DefiledSpec/liri-bot/issues/new)
