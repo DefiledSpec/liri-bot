@@ -1,7 +1,7 @@
 'use strict'
 let fs = require('fs')
 
-class MyLogger {
+class Logger {
     constructor() { 
         this.file = 'logs/dev.md'
     }
@@ -17,4 +17,4 @@ class MyLogger {
     }
 }
 
-module.exports = MyLogger
+module.exports = Logger

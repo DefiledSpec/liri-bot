@@ -1,7 +1,7 @@
 'use strict'
-let MyLogger = require('./MyLogger')
+let Logger = require('./Logger')
 
-class Log extends MyLogger {
+class Log extends Logger {
     constructor(data, type, ops) {
         super()
         this.data = data || [{sumTing: 'Wong'}]
@@ -10,8 +10,8 @@ class Log extends MyLogger {
         this.msg = ''
         this.seperator = '----\n'
         this.getMsg() //creates message when log is constructed
-        this.display()
-        this.logData(this)
+        this.display() //displays message to console
+        this.logData(this) //logs message to appropriate log file using Logger class
     }
     getMsg() {
         this.msg = `\n\n## ${this.type}\n\n`  

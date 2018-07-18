@@ -101,8 +101,7 @@ function getMovie(q) {
         let message = `OMDB search for '${q}' ${error ? 'failed' : 'succeeded'} and took ${(time / 1000).toFixed(1)}s to complete.`
         if(!error && response.statusCode === 200) {
             let data = JSON.parse(body)
-            let actors = [...data.Actors.split(', ')].map(actor => actor = `\n\t\t* ${actor}`).join('')
-            console.log(actors)
+            let actors = [...data.Actors.split(', ')].map(actor => actor = `\n\t\t* ${actor}`).join('') + '\n'
             let movie = {
                 Title: data.Title,
                 Year: data.Year,

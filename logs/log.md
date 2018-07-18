@@ -302,3 +302,106 @@
 ----
 	* Results:    OMDB search for 'undefined' succeeded and took 0.0s to complete.
 ----
+
+
+## LIRI Command
+
+	* Log:    Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:    The Other Guys
+	* Year:    2010
+	* IMDB Rating:    6.7
+	* Rotten Tomatoes Rating:    78%
+	* Country:    USA
+	* Language:    English, Ukrainian
+	* Plot:    Two mismatched New York City detectives seize an opportunity to step up like the city's top cops, whom they idolize, only things don't quite go as planned.
+	* Actors:    
+		* Will Ferrell
+		* Derek Jeter
+		* Mark Wahlberg
+		* Eva Mendes
+
+----
+	* Results:    OMDB search for 'the+other+guys' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:    Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:    The Other Guys
+	* Year:    2010
+	* IMDB Rating:    6.7
+	* Rotten Tomatoes Rating:    78%
+	* Country:    USA
+	* Language:    English, Ukrainian
+	* Plot:    Two mismatched New York City detectives seize an opportunity to step up like the city's top cops, whom they idolize, only things don't quite go as planned.
+	* Actors:    
+		* Will Ferrell
+		* Derek Jeter
+		* Mark Wahlberg
+		* Eva Mendes
+
+----
+	* Results:    OMDB search for 'the+other+guys' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:    Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:    The Other Guys
+	* Year:    2010
+	* IMDB Rating:    6.7
+	* Rotten Tomatoes Rating:    78%
+	* Country:    USA
+	* Language:    English, Ukrainian
+	* Plot:    Two mismatched New York City detectives seize an opportunity to step up like the city's top cops, whom they idolize, only things don't quite go as planned.
+	* Actors:    
+		* Will Ferrell
+		* Derek Jeter
+		* Mark Wahlberg
+		* Eva Mendes
+
+----
+	* Results:    OMDB search for 'the+other+guys' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:    Running my-tweets
+
+----
+
+
+## Tweets
+
+	* Tweet:    things
+	* Date:    Sat Jul 14 11:03:09
+----
+	* Tweet:    stuff's happening
+	* Date:    Sat Jul 14 11:02:39
+----
+	* Tweet:    This is a tweet.
+	* Date:    Wed Jul 11 21:28:32
+----
+	* Results:    Tweets search for 'Defiled Spec' succeeded and took 0.6s to complete. 3 / 20 result(s).
+----
