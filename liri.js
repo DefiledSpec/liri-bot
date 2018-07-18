@@ -50,7 +50,7 @@ function run(query) {
 }
 // my-tweets
 function getTweets(q) {
-    const user = 'Defiled Spec'
+    const user = q ? q : 'Defiled Spec'
     console.log(`Getting Tweets for ${user}`)
     twitter.get('statuses/user_timeline', user, (error, tweets) => {
         time = Date.now() - startTime
@@ -98,7 +98,6 @@ function getMovie(q) {
     let query = q ? q : 'Mr. Nobody'
     let queryUrl = `http://www.omdbapi.com/?t=${query}&y=&plot=short&apikey=${keys.omdb}`
     request(queryUrl, function(error, response, body) {
-        console.log(response.statusCode, response.statusMessage, error)
         let message = `OMDB search for '${q}' ${error ? 'failed' : 'succeeded'} and took ${(time / 1000).toFixed(1)}s to complete.`
         if(!error && response.statusCode === 200) {
             let data = JSON.parse(body)
@@ -123,7 +122,6 @@ function getMovie(q) {
 }
 // do-what-it-says
 function doRandom() {
-    console.log('Doing Random Stuff')
     fs.readFile('./random.txt', 'utf-8', (err, data) => {
         if(!err) {
             let randArgs = [...data.split(',')]
@@ -149,7 +147,6 @@ function concatArgs(args, char) {
                 query += `${char}${args[i]}`
             }
         }
-        console.log(query)
         return query
     }
 }
