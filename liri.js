@@ -41,11 +41,11 @@ function run(query) {
                 break;
             default:
                 err.Error = `Please use a correct command! : '${command}'`
-                new Log([err], 'Error', true)
+                new Log([err], 'LIRI Error', true)
         }
     }else{
         err.Error = `No command specified`
-        new Log([err], 'Error', true)
+        new Log([err], 'LIRI Error', true)
     }
 }
 // my-tweets
@@ -115,7 +115,7 @@ function getMovie(q) {
             let results = {Results: message}
             new Log([movie, results], 'OMDB')
         }else{
-            new Log([{msg: error}], 'Error', true)
+            new Log([{msg: error}], 'OMDB Error', true)
         }
     })
 }
@@ -123,14 +123,14 @@ function getMovie(q) {
 function doRandom() {
     fs.readFile('./random.txt', 'utf-8', (err, data) => {
         if(!err) {
-            let randArgs = [...data.split(',')]
-            command = randArgs[0]
-            let params = randArgs[1] ? [...randArgs[1].split(' ')] : [null]
+            let randArgs = [...data.split(',')] //splits command and args into the array in 2 spots
+            command = randArgs[0] //this is our liri command it should be the first element in our final array
+            let params = randArgs[1] ? [...randArgs[1].split(' ')] : [null] // if params... split each of them and shove them into an array
+            //construct the 'node liri <command> <parameters>' like 'proccess.argv' array
             consoleArgs = [null, null, command, ...params] 
-            console.log(consoleArgs)
-            run(consoleArgs)
+            run(consoleArgs) //runs liri as if it was entered at startup
         }else{
-            new Log([{msg: err}], 'Error', true)
+            new Log([{msg: err}], 'Random Function Error', true)
         }
     })
 }

@@ -245,20 +245,6 @@
 ----
 
 
-## LIRI Command
-
-	* Log:    Running movie-this
-
-----
-
-
-## LIRI Command
-
-	* Log:    Running movie-this
-
-----
-
-
 ## OMDB
 
 	* Title:    Mr. Nobody
@@ -429,4 +415,22 @@
 	* Album:    The Hits--Chapter One
 ----
 	* Results:    Spotify search for '/i want it that way/i' succeeded and took 1.3s to complete. 1 result(s).
+----
+
+
+## LIRI Command
+
+	* Log:    Running spotify-this-song
+
+----
+
+
+## Spotify
+
+	* Artists:    Backstreet Boys
+	* Song:    I Want It That Way
+	* URL:    [I Want It That Way](https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=f424bea839f4482d81dc5cafa93f896a)
+	* Album:    The Hits--Chapter One
+----
+	* Results:    Spotify search for '/i want it that way/i' succeeded and took 0.9s to complete. 1 result.
 ----
