@@ -1,7 +1,10 @@
 'use strict'
 
-class Log {
+let MyLogger = require('./MyLogger')
+
+class Log extends MyLogger {
     constructor(data, type, ops) {
+        super()
         this.data = data || [{sumTing: 'Wong'}]
         this.type = type || 'No Type'
         this.ops = ops || false
@@ -9,18 +12,17 @@ class Log {
         this.seperator = '----\n'
         this.getMsg() //creates message when log is constructed
         this.display()
+        this.logData(this)
     }
     getMsg() {
-        this.msg = `\n\n## ${this.type} File Starting \n\n`  
+        this.msg = `\n\n## ${this.type}\n\n`  
             for(let i = 0; i < this.data.length; i++) {
                 let str = this.data[i]
-                // this.type === 'Tweets' ? this.msg += `${i + 1}.\n` : null
                 for (const key in str) {
                     this.msg += `\t* ${key}:    ${str[key]}\n`
                 }
-                this.msg += '\n----\n'
+                this.msg += '----\n'
             }
-        // this.msg += this.seperator
         return this.msg
     }
     display() {

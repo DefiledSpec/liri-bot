@@ -25,11 +25,11 @@ TWITTER_ACCESS_TOKEN_SECRET = <KEY_HERE>
 
 * `node liri.js my-tweets <twitter username here>` - This will display this will display the last 20 tweets from Twitter for the user provided. If there is no user provided, it defaults to *'Defiled Spec'*.
 
-* `node liri.js songify-this-song <song name here>` - This will return the provided songs information using an API call to Spotify. If no song name is provided, it defaults to *'The Sign'* - by Ace of Base.
+* `node liri.js songify-this-song <song name here>` - This will return the provided songs information using an API call to Spotify. If no song name is provided, it defaults to *'All The Small Things'* - by Blink-182.
 
 * `node liri.js movie-this <movie name here>` - This command will return the provided movie's
 
-* `node liri.js do-what-it-says` - This command looks at <i>random.txt</i> and runs the command in the file
+* `node liri.js do-what-it-says` - This command looks at *random.txt* and runs the command in the file. This command can run any of the commands above, just replace the text in the file with the command you would like to run. Arguments are seperated by a *','* and no spaces, Song, Movie, and Twitter names may contain spaces. This command is defaulted to *'spotify-this-song,i want it that way'*
 
 ### Features
 ---
@@ -42,7 +42,7 @@ The data is logged in markdown format for easier readability and access to the i
 - [x] `my-tweets`
 - [x] `songify-this-song`
 - [ ] `movie-this`
-- [ ] `do-what-it-says`
+- [x] `do-what-it-says`
 
 ---
 
