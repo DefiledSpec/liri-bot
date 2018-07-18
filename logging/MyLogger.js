@@ -1,5 +1,4 @@
 'use strict'
-
 let fs = require('fs')
 
 class MyLogger {

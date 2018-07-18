@@ -1,5 +1,4 @@
 'use strict'
-
 let MyLogger = require('./MyLogger')
 
 class Log extends MyLogger {
