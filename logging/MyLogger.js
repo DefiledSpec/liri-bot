@@ -7,7 +7,6 @@ class MyLogger {
         this.file = 'logs/dev.md'
     }
     logData(log) {
-        console.log(log.ops)
         this.setLogger(log.ops)
         fs.appendFile(this.file, log.msg, this.error)
     }
