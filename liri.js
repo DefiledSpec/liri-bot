@@ -89,8 +89,8 @@ function getSong(q) {
         let results = {Results: message}
         new Log([songData, results], 'Spotify')
         })
-    }).catch(err => {
-        new Log([{err: err}], `Spotify Error`, true)})
+    }).catch(error => {
+        new Log([{msg: error}], `Spotify Error`, true)})
 }
 
 // movie-this
@@ -131,7 +131,7 @@ function doRandom() {
             console.log(consoleArgs)
             run(consoleArgs)
         }else{
-            new Log([err], 'Error', true)
+            new Log([{msg: err}], 'Error', true)
         }
     })
 }
