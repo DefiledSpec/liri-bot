@@ -85,3 +85,27 @@ foo => bar
 
 	* Error:    Please use a correct command! : 'songify-this-song'
 ----
+
+
+## LIRI Error
+
+	* Error:		Please use a correct command! : 'move-this'
+----
+
+
+## Movie Not Found Error
+
+	* msg:		Movie not found!
+----
+
+
+## Movie Not Found Error
+
+	* msg:		Movie not found!
+----
+
+
+## Movie Not Found Error
+
+	* msg:		Movie not found!
+----

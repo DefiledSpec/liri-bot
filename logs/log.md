@@ -434,3 +434,355 @@
 ----
 	* Results:    Spotify search for '/i want it that way/i' succeeded and took 0.9s to complete. 1 result.
 ----
+
+
+## LIRI Command
+
+	* Log:		Running spotify-this-song
+
+----
+
+
+## Spotify
+
+	* Artists:		Backstreet Boys
+	* Song:		I Want It That Way
+	* URL:		[I Want It That Way](https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=f424bea839f4482d81dc5cafa93f896a)
+	* Album:		The Hits--Chapter One
+----
+	* Results:		Spotify search for '/i want it that way/i' succeeded and took 0.9s to complete. 1 result.
+----
+
+
+## LIRI Command
+
+	* Log:		Running spotify-this-song
+
+----
+
+
+## Spotify
+
+	* Artists:		Of Monsters and Men
+	* Song:			I Of The Storm
+	* URL:			None :(
+	* Album:		Beneath The Skin
+----
+	* Results:		Spotify search for '/monsters/i' succeeded and took 0.6s to complete. 1 result.
+----
+
+
+## LIRI Command
+
+	* Log:		Running move-this
+
+----
+
+
+## LIRI Command
+
+	* Log:		Running movie-this
+
+----
+
+
+## LIRI Command
+
+	* Log:		Running movie-this
+
+----
+
+
+## LIRI Command
+
+	* Log:		Running movie-this
+
+----
+
+
+## LIRI Command
+
+	* Log:		Running movie-this
+
+----
+
+
+## LIRI Command
+
+	* Log:		Running movie-this
+
+----
+
+
+## LIRI Command
+
+	* Log:		Running movie-this
+
+----
+
+
+## LIRI Command
+
+	* Log:		Running movie-this
+
+----
+
+
+## LIRI Command
+
+	* Log:		Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:		8 Mile
+	* Year:		2002
+	* IMDB Rating:		7.1
+	* Rotten Tomatoes Rating:		76%
+	* Country:		USA, Germany
+	* Language:		English
+	* Plot:		A young rapper, struggling with every aspect of his life, wants to make it big but his friends and foes make this odyssey of rap harder than it may seem.
+	* Actors:		
+		* Marshall Mathers
+		* Kim Basinger
+		* Mekhi Phifer
+		* Brittany Murphy
+----
+	* Results:		OMDB search for '8-mile' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:	8 Mile
+	* Year:	2002
+	* IMDB Rating:	7.1
+	* Rotten Tomatoes Rating:	76%
+	* Country:	USA, Germany
+	* Language:	English
+	* Plot:	A young rapper, struggling with every aspect of his life, wants to make it big but his friends and foes make this odyssey of rap harder than it may seem.
+	* Actors:	
+		* Marshall Mathers
+		* Kim Basinger
+		* Mekhi Phifer
+		* Brittany Murphy
+----
+	* Results:	OMDB search for '8-mile' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:	8 Mile
+	* Year:	2002
+	* IMDB Rating:	7.1
+	* Rotten Tomatoes:	76%
+	* Country:	USA, Germany
+	* Language:	English
+	* Plot:	A young rapper, struggling with every aspect of his life, wants to make it big but his friends and foes make this odyssey of rap harder than it may seem.
+	* Actors:	
+		* Marshall Mathers
+		* Kim Basinger
+		* Mekhi Phifer
+		* Brittany Murphy
+----
+	* Results:	OMDB search for '8-mile' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:	8 Mile
+	* Year:	2002
+	* IMDB Rating:	7.1
+	* Rotten Rating:	76%
+	* Country:	USA, Germany
+	* Language:	English
+	* Plot:	A young rapper, struggling with every aspect of his life, wants to make it big but his friends and foes make this odyssey of rap harder than it may seem.
+	* Actors:	
+		* Marshall Mathers
+		* Kim Basinger
+		* Mekhi Phifer
+		* Brittany Murphy
+----
+	* Results:	OMDB search for '8-mile' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:	8 Mile
+	* Year:	2002
+	* IMDB Rating:		7.1
+	* Rotten Rating:	76%
+	* Country:	USA, Germany
+	* Language:	English
+	* Plot:	A young rapper, struggling with every aspect of his life, wants to make it big but his friends and foes make this odyssey of rap harder than it may seem.
+	* Actors:	
+		* Marshall Mathers
+		* Kim Basinger
+		* Mekhi Phifer
+		* Brittany Murphy
+----
+	* Results:	OMDB search for '8-mile' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:	8 Mile
+	* Year:			2002
+	* IMDB Rating:		7.1
+	* Rotten Rating:	76%
+	* Country:	USA, Germany
+	* Language:	English
+	* Plot:	A young rapper, struggling with every aspect of his life, wants to make it big but his friends and foes make this odyssey of rap harder than it may seem.
+	* Actors:	
+		* Marshall Mathers
+		* Kim Basinger
+		* Mekhi Phifer
+		* Brittany Murphy
+----
+	* Results:	OMDB search for '8-mile' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:		8 Mile
+	* Year:			2002
+	* IMDB Rating:		7.1
+	* Rotten Rating:	76%
+	* Country:	USA, Germany
+	* Language:	English
+	* Plot:	A young rapper, struggling with every aspect of his life, wants to make it big but his friends and foes make this odyssey of rap harder than it may seem.
+	* Actors:	
+		* Marshall Mathers
+		* Kim Basinger
+		* Mekhi Phifer
+		* Brittany Murphy
+----
+	* Results:	OMDB search for '8-mile' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:		8 Mile
+	* Year:			2002
+	* IMDB Rating:		7.1
+	* Rotten Rating:	76%
+	* Country:			USA, Germany
+	* Language:			English
+	* Plot:	A young rapper, struggling with every aspect of his life, wants to make it big but his friends and foes make this odyssey of rap harder than it may seem.
+	* Actors:	
+		* Marshall Mathers
+		* Kim Basinger
+		* Mekhi Phifer
+		* Brittany Murphy
+----
+	* Results:	OMDB search for '8-mile' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:		8 Mile
+	* Year:			2002
+	* IMDB Rating:		7.1
+	* Rotten Rating:	76%
+	* Country:		USA, Germany
+	* Language:		English
+	* Plot:	A young rapper, struggling with every aspect of his life, wants to make it big but his friends and foes make this odyssey of rap harder than it may seem.
+	* Actors:	
+		* Marshall Mathers
+		* Kim Basinger
+		* Mekhi Phifer
+		* Brittany Murphy
+----
+	* Results:	OMDB search for '8-mile' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:		8 Mile
+	* Year:			2002
+	* IMDB Rating:		7.1
+	* Rotten Rating:	76%
+	* Country:		USA, Germany
+	* Language:		English
+	* Plot:		A young rapper, struggling with every aspect of his life, wants to make it big but his friends and foes make this odyssey of rap harder than it may seem.
+	* Actors:	
+		* Marshall Mathers
+		* Kim Basinger
+		* Mekhi Phifer
+		* Brittany Murphy
+----
+	* Results:	OMDB search for '8-mile' succeeded and took 0.0s to complete.
+----

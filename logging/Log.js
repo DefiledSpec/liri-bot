@@ -18,7 +18,7 @@ class Log extends Logger {
             for(let i = 0; i < this.data.length; i++) {
                 let str = this.data[i]
                 for (const key in str) {
-                    this.msg += `\t* ${key}:    ${str[key]}\n`
+                    this.msg += `\t* ${key}:\t${str[key]}\n`
                 }
                 this.msg += '----\n'
             }

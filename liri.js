@@ -21,8 +21,8 @@ let err = {}
 run()
 
 function run(query) {
-    new Log([{Log: `Running ${command}\n`}], `LIRI Command`)
     if(command) {
+        new Log([{Log: `Running ${command}\n`}], `LIRI Command`)
         query ? query : ''
         switch(command) {
             case 'my-tweets':
@@ -82,8 +82,8 @@ function getSong(q) {
             let url = song.preview_url ? `[${song.name}](${song.preview_url})` : 'None :('
         let songData = {
             Artists: song.artists[0].name,
-            Song: song.name,
-            URL: url,
+            Song: '\t' + song.name,
+            URL: '\t' + url,
             Album: song.album.name
         }
         let results = {Results: message}
@@ -101,15 +101,16 @@ function getMovie(q) {
         let message = `OMDB search for '${q}' ${error ? 'failed' : 'succeeded'} and took ${(time / 1000).toFixed(1)}s to complete.`
         if(!error && response.statusCode === 200) {
             let data = JSON.parse(body)
-            let actors = [...data.Actors.split(', ')].map(actor => actor = `\n\t\t* ${actor}`).join('') + '\n'
+            if(data.Error) return new Log([{msg: data.Error}], 'Movie Not Found Error', true)          
+            let actors = [...data.Actors.split(', ')].map(actor => actor = `\n\t\t* ${actor}`).join('')
             let movie = {
-                Title: data.Title,
-                Year: data.Year,
-                'IMDB Rating': data.imdbRating,
-                'Rotten Tomatoes Rating': data.Ratings[1].Value,
-                Country: data.Country,
-                Language: data.Language,
-                Plot: data.Plot,
+                Title: '\t' + data.Title,
+                Year: '\t\t' + data.Year,
+                'IMDB Rating': '\t' + data.imdbRating,
+                'Rotten Rating': data.Ratings[1].Value,
+                Country: '\t' + data.Country,
+                Language: '\t' + data.Language,
+                Plot: ' ' + data.Plot,
                 Actors: actors
             }
             let results = {Results: message}
