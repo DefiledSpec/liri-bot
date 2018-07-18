@@ -30,7 +30,12 @@ OMDB_KEY = <KEY_HERE>
 
 * `node liri.js my-tweets <twitter username here>` - This will display this will display the last 20 tweets from Twitter for the user provided. If there is no user provided, it defaults to *'Defiled Spec'*.
 
-* `node liri.js songify-this-song <song name here>` - This will return the provided songs information using an API call to Spotify. If no song name is provided, it defaults to *'All The Small Things'* - by Blink-182.
+* `node liri.js songify-this-song <song name here>` - This will return the information below for the song provided using an API call to Spotify. If no song name is provided, it defaults to *'All The Small Things'* - by Blink-182.
+
+    * Artist(s)
+    * Song Name
+    * Preview Url (If applicable)
+    * Album
 
 * `node liri.js movie-this <movie name here>` - This command will return the following information for the movie provided. If no movie is provided, it defaults to *'Mr Nobody'*.
 

@@ -79,7 +79,7 @@ function getSong(q) {
         let message = `Spotify search for '${query}' succeeded and took ${(time / 1000).toFixed(1)}s to complete. ${res.tracks.items.length} result(s).`
         let songs = res.tracks.items
         songs.forEach(song => {
-            let url = song.preview_url ? song.preview_url : 'None :('
+            let url = song.preview_url ? `[${song.name}](${song.preview_url})` : 'None :('
         let songData = {
             Artists: song.artists[0].name,
             Song: song.name,

@@ -79,3 +79,9 @@ foo => bar
 
 	* Error:    Please use a correct command! => 'spotify-this-song i want it that way'
 ----
+
+
+## Error
+
+	* Error:    Please use a correct command! : 'songify-this-song'
+----
