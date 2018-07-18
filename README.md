@@ -4,7 +4,9 @@ This is a project for KU's coding bootcamp, using node.js, twitter, omdb, and sp
 
 ### Instructions
 
-1. Clone the repo from github => https://github.com/DefiledSpec/liri-bot.git
+1. Clone the repo from github
+    * https://github.com/DefiledSpec/liri-bot.git
+
 2. Open bash and run 
 ``` bash
     npm install
@@ -13,10 +15,13 @@ This is a project for KU's coding bootcamp, using node.js, twitter, omdb, and sp
 ```
 SPOTIFY_ID = <KEY_HERE>
 SPOTIFY_SECRET = <KEY_HERE>
+
 TWITTER_CONSUMER_KEY = <KEY_HERE>
 TWITTER_CONSUMER_SECRET = <KEY_HERE>
 TWITTER_ACCESS_TOKEN_KEY = <KEY_HERE>
 TWITTER_ACCESS_TOKEN_SECRET = <KEY_HERE>
+
+OMDB_KEY = <KEY_HERE>
 ```
 4. You're ready to start using Liri by using any of the commands below!
 
@@ -27,7 +32,16 @@ TWITTER_ACCESS_TOKEN_SECRET = <KEY_HERE>
 
 * `node liri.js songify-this-song <song name here>` - This will return the provided songs information using an API call to Spotify. If no song name is provided, it defaults to *'All The Small Things'* - by Blink-182.
 
-* `node liri.js movie-this <movie name here>` - This command will return the provided movie's
+* `node liri.js movie-this <movie name here>` - This command will return the following information for the movie provided. If no movie is provided, it defaults to *'Mr Nobody'*.
+
+    * Title
+    * Year
+    * Country
+    * Language
+    * Plot
+    * Actors
+    * IMDB Rating
+    * Rotten Tomatoes Rating
 
 * `node liri.js do-what-it-says` - This command looks at *random.txt* and runs the command in the file. This command can run any of the commands above, just replace the text in the file with the command you would like to run. Arguments are seperated by a *','* and no spaces, Song, Movie, and Twitter names may contain spaces. This command is defaulted to *'spotify-this-song,i want it that way'*
 
@@ -41,9 +55,11 @@ The data is logged in markdown format for easier readability and access to the i
 ---
 - [x] `my-tweets`
 - [x] `songify-this-song`
-- [ ] `movie-this`
+- [x] `movie-this`
 - [x] `do-what-it-says`
 
+- [x] Logging
+- [x] Error Logging
 ---
 
 Please fill free to submit an issue [here](https://github.com/DefiledSpec/liri-bot/issues/new)

@@ -95,10 +95,11 @@ function getSong(q) {
 
 // movie-this
 function getMovie(q) {
-    let queryUrl = `http://www.omdbapi.com/?t=${q}&y=&plot=short&apikey=${keys.omdb}`
+    let query = q ? q : 'Mr. Nobody'
+    let queryUrl = `http://www.omdbapi.com/?t=${query}&y=&plot=short&apikey=${keys.omdb}`
     request(queryUrl, function(error, response, body) {
         console.log(response.statusCode, response.statusMessage, error)
-        let message = `Tweets search for '${user}' ${error ? 'failed' : 'succeeded'} and took ${(time / 1000).toFixed(1)}s to complete. ${tweets.length} result(s).`
+        let message = `OMDB search for '${q}' ${error ? 'failed' : 'succeeded'} and took ${(time / 1000).toFixed(1)}s to complete.`
         if(!error && response.statusCode === 200) {
             let data = JSON.parse(body)
             let actors = [...data.Actors.split(', ')].map(actor => actor = `\n\t\t* ${actor}`).join('')
@@ -113,7 +114,8 @@ function getMovie(q) {
                 Plot: data.Plot,
                 Actors: actors
             }
-            new Log([movie], 'OMDB')
+            let results = {Results: message}
+            new Log([movie, results], 'OMDB')
         }else{
             new Log([{msg: error}], 'Error', true)
         }

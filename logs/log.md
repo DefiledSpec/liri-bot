@@ -1356,3 +1356,69 @@
 ----
 	* Results:    Spotify search for '/i want it that way/i' succeeded and took 0.9s to complete. 1 result(s).
 ----
+
+
+## LIRI Command
+
+	* Log:    Running movie-this
+
+----
+
+
+## LIRI Command
+
+	* Log:    Running movie-this
+
+----
+
+
+## LIRI Command
+
+	* Log:    Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:    Mr. Nobody
+	* Year:    2009
+	* IMDB Rating:    7.9
+	* Rotten Tomatoes Rating:    66%
+	* Country:    Belgium, Germany, Canada, France, USA, UK
+	* Language:    English, Mohawk
+	* Plot:    A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+	* Actors:    
+		* Jared Leto
+		* Sarah Polley
+		* Diane Kruger
+		* Linh Dan Pham
+----
+	* Results:    OMDB search for 'undefined' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:    Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:    Mr. Nobody
+	* Year:    2009
+	* IMDB Rating:    7.9
+	* Rotten Tomatoes Rating:    66%
+	* Country:    Belgium, Germany, Canada, France, USA, UK
+	* Language:    English, Mohawk
+	* Plot:    A boy stands on a station platform as a train is about to leave. Should he go with his mother or stay with his father? Infinite possibilities arise from this decision. As long as he doesn't choose, anything is possible.
+	* Actors:    
+		* Jared Leto
+		* Sarah Polley
+		* Diane Kruger
+		* Linh Dan Pham
+----
+	* Results:    OMDB search for 'undefined' succeeded and took 0.0s to complete.
+----
