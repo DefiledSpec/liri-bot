@@ -6,6 +6,7 @@ const Spotify = require('node-spotify-api')
 const Twitter = require('twitter')
 const fs = require('fs')
 const Log = require('./logging/Log')
+const request = require('request')
 
 const spotify = new Spotify(keys.spotify)
 const twitter = new Twitter(keys.twitter)
@@ -13,12 +14,14 @@ const twitter = new Twitter(keys.twitter)
 let consoleArgs = process.argv
 let command = process.argv[2]
 
-new Log([{Log: `Starting ${command}\n`}], `LIRI Command`)
 const startTime = Date.now()
 let time = 0;
 let err = {}
+
 run()
+
 function run(query) {
+    new Log([{Log: `Running ${command}\n`}], `LIRI Command`)
     if(command) {
         query ? query : ''
         switch(command) {
@@ -37,7 +40,7 @@ function run(query) {
                 doRandom();
                 break;
             default:
-                err.Error = `Please use a correct command! => '${command}'`
+                err.Error = `Please use a correct command! : '${command}'`
                 new Log([err], 'Error', true)
         }
     }else{
@@ -45,7 +48,6 @@ function run(query) {
         new Log([err], 'Error', true)
     }
 }
-
 // my-tweets
 function getTweets(q) {
     const user = 'Defiled Spec'
@@ -90,10 +92,32 @@ function getSong(q) {
     }).catch(err => {
         new Log([{err: err}], `Spotify Error`, true)})
 }
+
 // movie-this
 function getMovie(q) {
-    console.log('Getting Movie for ' + q)
-
+    let queryUrl = `http://www.omdbapi.com/?t=${q}&y=&plot=short&apikey=${keys.omdb}`
+    request(queryUrl, function(error, response, body) {
+        console.log(response.statusCode, response.statusMessage, error)
+        let message = `Tweets search for '${user}' ${error ? 'failed' : 'succeeded'} and took ${(time / 1000).toFixed(1)}s to complete. ${tweets.length} result(s).`
+        if(!error && response.statusCode === 200) {
+            let data = JSON.parse(body)
+            let actors = [...data.Actors.split(', ')].map(actor => actor = `\n\t\t* ${actor}`).join('')
+            console.log(actors)
+            let movie = {
+                Title: data.Title,
+                Year: data.Year,
+                'IMDB Rating': data.imdbRating,
+                'Rotten Tomatoes Rating': data.Ratings[1].Value,
+                Country: data.Country,
+                Language: data.Language,
+                Plot: data.Plot,
+                Actors: actors
+            }
+            new Log([movie], 'OMDB')
+        }else{
+            new Log([{msg: error}], 'Error', true)
+        }
+    })
 }
 // do-what-it-says
 function doRandom() {
