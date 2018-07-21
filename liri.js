@@ -60,7 +60,7 @@ function getTweets(q) {
             for(let i = 0; i < tweets.length; i++) {
                 let tweet = {
                     Tweet: tweets[i].text,
-                    Date: tweets[i].created_at.substring(0, 19),
+                    Date: '\t' + tweets[i].created_at.substring(0, 19),
                 }
                 tweetsArr.push(tweet)
             }
@@ -102,12 +102,13 @@ function getMovie(q) {
         if(!error && response.statusCode === 200) {
             let data = JSON.parse(body)
             if(data.Error) return new Log([{msg: data.Error}], 'Movie Not Found Error', true)          
+            console.log(data.Actors)
             let actors = [...data.Actors.split(', ')].map(actor => actor = `\n\t\t* ${actor}`).join('')
             let movie = {
                 Title: '\t' + data.Title,
                 Year: '\t\t' + data.Year,
                 'IMDB Rating': '\t' + data.imdbRating,
-                'Rotten Rating': data.Ratings[1].Value,
+                'Rotten Rating': data.Ratings[1] ? data.Ratings[1].Value : 'N/A',
                 Country: '\t' + data.Country,
                 Language: '\t' + data.Language,
                 Plot: ' ' + data.Plot,
@@ -124,9 +125,9 @@ function getMovie(q) {
 function doRandom() {
     fs.readFile('./random.txt', 'utf-8', (err, data) => {
         if(!err) {
-            let randArgs = [...data.split(',')] //splits command and args into the array in 2 spots
+            let randArgs = data.split(',') //splits command and args into the array in 2 spots
             command = randArgs[0] //this is our liri command it should be the first element in our final array
-            let params = randArgs[1] ? [...randArgs[1].split(' ')] : [null] // if params... split each of them and shove them into an array
+            let params = randArgs[1] ? randArgs[1].split(' ') : [null] // if params... split each of them and shove them into an array
             //construct the 'node liri <command> <parameters>' like 'proccess.argv' array
             consoleArgs = [null, null, command, ...params] 
             run(consoleArgs) //runs liri as if it was entered at startup

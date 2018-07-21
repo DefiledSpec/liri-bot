@@ -786,3 +786,311 @@
 ----
 	* Results:	OMDB search for '8-mile' succeeded and took 0.0s to complete.
 ----
+
+
+## LIRI Command
+
+	* Log:	Running spotify-this-song
+
+----
+
+
+## Spotify
+
+	* Artists:	blink-182
+	* Song:		All The Small Things
+	* URL:		None :(
+	* Album:	Enema Of The State
+----
+	* Results:	Spotify search for '/All The Small Things/' succeeded and took 0.5s to complete. 1 result.
+----
+
+
+## LIRI Command
+
+	* Log:	Running my-tweets
+
+----
+
+
+## Tweets
+
+	* Tweet:	things
+	* Date:	Sat Jul 14 11:03:09
+----
+	* Tweet:	stuff's happening
+	* Date:	Sat Jul 14 11:02:39
+----
+	* Tweet:	This is a tweet.
+	* Date:	Wed Jul 11 21:28:32
+----
+	* Results:	Tweets search for 'Defiled Spec' succeeded and took 0.4s to complete. 3 / 20 result(s).
+----
+
+
+## LIRI Command
+
+	* Log:	Running my-tweets
+
+----
+
+
+## Tweets
+
+	* Tweet:	things
+	* Date:		Sat Jul 14 11:03:09
+----
+	* Tweet:	stuff's happening
+	* Date:		Sat Jul 14 11:02:39
+----
+	* Tweet:	This is a tweet.
+	* Date:		Wed Jul 11 21:28:32
+----
+	* Results:	Tweets search for 'Defiled Spec' succeeded and took 0.2s to complete. 3 / 20 result(s).
+----
+
+
+## LIRI Command
+
+	* Log:	Running do-what-it-says
+
+----
+
+
+## LIRI Command
+
+	* Log:	Running spotify-this-song
+
+----
+
+
+## Spotify
+
+	* Artists:	Backstreet Boys
+	* Song:		I Want It That Way
+	* URL:		[I Want It That Way](https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=f424bea839f4482d81dc5cafa93f896a)
+	* Album:	The Hits--Chapter One
+----
+	* Results:	Spotify search for '/i want it that way/i' succeeded and took 0.6s to complete. 1 result.
+----
+
+
+## LIRI Command
+
+	* Log:	Running do-what-it-says
+
+----
+
+
+## LIRI Command
+
+	* Log:	Running spotify-this-song
+
+----
+
+
+## Spotify
+
+	* Artists:	Backstreet Boys
+	* Song:		I Want It That Way
+	* URL:		[I Want It That Way](https://p.scdn.co/mp3-preview/e72a05dc3f69c891e3390c3ceaa77fad02f6b5f6?cid=f424bea839f4482d81dc5cafa93f896a)
+	* Album:	The Hits--Chapter One
+----
+	* Results:	Spotify search for '/i want it that way/i' succeeded and took 0.7s to complete. 1 result.
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:		The Matrix
+	* Year:			1999
+	* IMDB Rating:		8.7
+	* Rotten Rating:	87%
+	* Country:		USA
+	* Language:		English
+	* Plot:	 A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.
+	* Actors:	
+		* Keanu Reeves
+		* Laurence Fishburne
+		* Carrie-Anne Moss
+		* Hugo Weaving
+----
+	* Results:	OMDB search for 'the+matrix' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:		The Matrix
+	* Year:			1999
+	* IMDB Rating:		8.7
+	* Rotten Rating:	87%
+	* Country:		USA
+	* Language:		English
+	* Plot:	 A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.
+	* Actors:	
+		* Keanu Reeves
+		* Laurence Fishburne
+		* Carrie-Anne Moss
+		* Hugo Weaving
+----
+	* Results:	OMDB search for 'the+matrix' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:		Matrix
+	* Year:			1993–
+	* IMDB Rating:		8.4
+	* Rotten Rating:	N/A
+	* Country:		Canada
+	* Language:		English
+	* Plot:	 Steven Matrix is one of the underworld's foremost hitmen until his luck runs out, and someone puts a contract out on him. Shot in the forehead by a .22 pistol, Matrix "dies" and finds ...
+	* Actors:	
+		* Nick Mancuso
+		* Phillip Jarrett
+		* Carrie-Anne Moss
+		* John Vernon
+----
+	* Results:	OMDB search for 'matrix' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:		Matrix
+	* Year:			1993–
+	* IMDB Rating:		8.4
+	* Rotten Rating:	N/A
+	* Country:		Canada
+	* Language:		English
+	* Plot:	 Steven Matrix is one of the underworld's foremost hitmen until his luck runs out, and someone puts a contract out on him. Shot in the forehead by a .22 pistol, Matrix "dies" and finds ...
+	* Actors:	
+		* Nick Mancuso
+		* Phillip Jarrett
+		* Carrie-Anne Moss
+		* John Vernon
+----
+	* Results:	OMDB search for 'matrix' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:		The Matrix
+	* Year:			1999
+	* IMDB Rating:		8.7
+	* Rotten Rating:	87%
+	* Country:		USA
+	* Language:		English
+	* Plot:	 A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.
+	* Actors:	
+		* Keanu Reeves
+		* Laurence Fishburne
+		* Carrie-Anne Moss
+		* Hugo Weaving
+----
+	* Results:	OMDB search for 'the+matrix' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:		The Matrix
+	* Year:			1999
+	* IMDB Rating:		8.7
+	* Rotten Rating:	87%
+	* Country:		USA
+	* Language:		English
+	* Plot:	 A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.
+	* Actors:	
+		* Keanu Reeves
+		* Laurence Fishburne
+		* Carrie-Anne Moss
+		* Hugo Weaving
+----
+	* Results:	OMDB search for 'the+matrix' succeeded and took 0.0s to complete.
+----
+
+
+## LIRI Command
+
+	* Log:	Running movie-this
+
+----
+
+
+## OMDB
+
+	* Title:		The Matrix
+	* Year:			1999
+	* IMDB Rating:		8.7
+	* Rotten Rating:	87%
+	* Country:		USA
+	* Language:		English
+	* Plot:	 A computer hacker learns from mysterious rebels about the true nature of his reality and his role in the war against its controllers.
+	* Actors:	
+		* Keanu Reeves
+		* Laurence Fishburne
+		* Carrie-Anne Moss
+		* Hugo Weaving
+----
+	* Results:	OMDB search for 'the+matrix' succeeded and took 0.0s to complete.
+----
